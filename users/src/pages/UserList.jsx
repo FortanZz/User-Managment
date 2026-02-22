@@ -47,11 +47,11 @@ export default function UserList({ users, dispatch, navigate }) {
     const active = sortField === field;
     return (
       <button onClick={() => handleSort(field)} style={{
-        background: active ? "rgba(61,90,254,0.1)" : "none",
+        background: active ? "rgba(107,91,69,0.08)" : "none",
         border: "none", cursor: "pointer", padding: "4px 10px", borderRadius: 6,
         fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 11,
         textTransform: "uppercase", letterSpacing: "0.08em",
-        color: active ? "#3D5AFE" : "#888",
+        color: active ? "#6B5B45" : "#888",
         display: "flex", alignItems: "center", gap: 4,
       }}>
         {label}
@@ -82,7 +82,7 @@ export default function UserList({ users, dispatch, navigate }) {
           </p>
           <div style={{ display: "flex", gap: 10, justifyContent: "flex-end", marginTop: 20 }}>
             <button onClick={() => setDeleteTarget(null)} style={{
-              padding: "10px 20px", borderRadius: 8, border: "1.5px solid #E0E0EA",
+              padding: "10px 20px", borderRadius: 8, border: "1.5px solid #E2DDD8",
               background: "#fff", cursor: "pointer", fontFamily: "'DM Sans', sans-serif",
               fontWeight: 600, fontSize: 14, color: "#555",
             }}>Cancel</button>
@@ -115,8 +115,8 @@ export default function UserList({ users, dispatch, navigate }) {
             placeholder="Search by name or email…"
             style={{
               width: "100%", padding: "11px 14px 11px 42px", borderRadius: 10,
-              border: "1.5px solid #E0E0EA", fontFamily: "'DM Sans', sans-serif",
-              fontSize: 14, color: "#0A0F1E", outline: "none",
+              border: "1.5px solid #E2DDD8", fontFamily: "'DM Sans', sans-serif",
+              fontSize: 14, color: "#1C1917", outline: "none",
               background: "#FAFAFA", boxSizing: "border-box",
             }}
           />
@@ -124,9 +124,9 @@ export default function UserList({ users, dispatch, navigate }) {
         <button onClick={() => setShowAdd(true)} style={{
           display: "flex", alignItems: "center", gap: 8,
           padding: "11px 20px", borderRadius: 10, border: "none", cursor: "pointer",
-          background: "linear-gradient(135deg,#3D5AFE,#7B2FF7)", color: "#fff",
+          background: "linear-gradient(135deg,#4A3F32,#6B5B45)", color: "#fff",
           fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: 14,
-          boxShadow: "0 4px 16px rgba(61,90,254,0.35)", whiteSpace: "nowrap",
+          boxShadow: "0 4px 16px rgba(107,91,69,0.25)", whiteSpace: "nowrap",
         }}>
           <Icon name="plus" size={16} /> Add User
         </button>

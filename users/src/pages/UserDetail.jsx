@@ -6,16 +6,16 @@ import Icon     from "../components/Icon";
 
 const cardStyle = {
   background: "#fff", borderRadius: 16, padding: "20px 24px",
-  boxShadow: "0 2px 12px rgba(0,0,0,0.06)", border: "1px solid #F0F0F5",
+  boxShadow: "0 2px 12px rgba(0,0,0,0.06)", border: "1px solid #F0EDE8",
 };
 
 function InfoRow({ icon, label, value }) {
   return (
     <div style={{
       display: "flex", alignItems: "flex-start", gap: 12,
-      padding: "14px 0", borderBottom: "1px solid #F0F0F5",
+      padding: "14px 0", borderBottom: "1px solid #F0EDE8",
     }}>
-      <span style={{ color: "#3D5AFE", marginTop: 2, flexShrink: 0 }}>
+      <span style={{ color: "#6B5B45", marginTop: 2, flexShrink: 0 }}>
         <Icon name={icon} size={18} />
       </span>
       <div>
@@ -26,7 +26,7 @@ function InfoRow({ icon, label, value }) {
         }}>
           {label}
         </div>
-        <div style={{ fontSize: 15, color: "#0A0F1E", fontFamily: "'DM Sans', sans-serif" }}>
+        <div style={{ fontSize: 15, color: "#1C1917", fontFamily: "'DM Sans', sans-serif" }}>
           {value || "—"}
         </div>
       </div>
@@ -41,7 +41,7 @@ export default function UserDetail({ user, navigate, dispatch }) {
     <div style={{ textAlign: "center", padding: 80, color: "#888", fontFamily: "'DM Sans', sans-serif" }}>
       User not found.{" "}
       <button onClick={() => navigate("/")} style={{
-        color: "#3D5AFE", background: "none", border: "none", cursor: "pointer", fontWeight: 600,
+        color: "#6B5B45", background: "none", border: "none", cursor: "pointer", fontWeight: 600,
       }}>
         Go back
       </button>
@@ -69,13 +69,13 @@ export default function UserDetail({ user, navigate, dispatch }) {
       <button onClick={() => navigate("/")} style={{
         display: "flex", alignItems: "center", gap: 8, background: "none",
         border: "none", cursor: "pointer", fontFamily: "'DM Sans', sans-serif",
-        fontSize: 14, fontWeight: 600, color: "#3D5AFE", padding: "0 0 24px",
+        fontSize: 14, fontWeight: 600, color: "#6B5B45", padding: "0 0 24px",
       }}>
         <Icon name="back" size={16} /> Back to Users
       </button>
 
       <div style={{
-        background: "linear-gradient(135deg,#3D5AFE 0%,#7B2FF7 100%)",
+        background: "linear-gradient(135deg,#4A3F32 0%,#6B5B45 100%)",
         borderRadius: 20, padding: "40px 32px", marginBottom: 24,
         display: "flex", alignItems: "center", gap: 24,
         flexWrap: "wrap", position: "relative", overflow: "hidden",
@@ -117,7 +117,7 @@ export default function UserDetail({ user, navigate, dispatch }) {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 20 }}>
 
         <div style={cardStyle}>
-          <h3 style={{ margin: "0 0 4px", fontFamily: "'Playfair Display', serif", fontSize: 17, color: "#0A0F1E" }}>
+          <h3 style={{ margin: "0 0 4px", fontFamily: "'Playfair Display', serif", fontSize: 17, color: "#1C1917" }}>
             Contact
           </h3>
           <InfoRow icon="mail"  label="Email"   value={user.email} />
@@ -126,7 +126,7 @@ export default function UserDetail({ user, navigate, dispatch }) {
         </div>
 
         <div style={cardStyle}>
-          <h3 style={{ margin: "0 0 4px", fontFamily: "'Playfair Display', serif", fontSize: 17, color: "#0A0F1E" }}>
+          <h3 style={{ margin: "0 0 4px", fontFamily: "'Playfair Display', serif", fontSize: 17, color: "#1C1917" }}>
             Address
           </h3>
           <InfoRow icon="map"      label="Street" value={user.address?.street} />
@@ -135,7 +135,7 @@ export default function UserDetail({ user, navigate, dispatch }) {
         </div>
 
         <div style={{ ...cardStyle, gridColumn: "1 / -1" }}>
-          <h3 style={{ margin: "0 0 4px", fontFamily: "'Playfair Display', serif", fontSize: 17, color: "#0A0F1E" }}>
+          <h3 style={{ margin: "0 0 4px", fontFamily: "'Playfair Display', serif", fontSize: 17, color: "#1C1917" }}>
             Company
           </h3>
           <InfoRow icon="building" label="Name"        value={user.company?.name} />

@@ -21,11 +21,11 @@ export default function Modal({ title, children, onClose }) {
       >
         <div style={{
           display: "flex", alignItems: "center", justifyContent: "space-between",
-          padding: "20px 24px", borderBottom: "1px solid #F0F0F5",
+          padding: "20px 24px", borderBottom: "1px solid #F0EDE8",
         }}>
           <h2 style={{
             margin: 0, fontFamily: "'Playfair Display', serif",
-            fontSize: 20, color: "#0A0F1E",
+            fontSize: 20, color: "#1C1917",
           }}>
             {title}
           </h2>
